@@ -5,9 +5,12 @@ function croppedIm = threshCropIm(inputImage, thresh)
 % 10/31/2022
 
 % perform threshold and invert
-inputImage(inputImage >= thresh) = 255;
-inputImage(inputImage ~= 255) = 0;
-inputImage = ~inputImage .* 255;
+% inputImage(inputImage >= thresh) = 255;
+% inputImage(inputImage ~= 255) = 0;
+% inputImage = ~inputImage .* 255;
+
+inputImage = 255 - inputImage;
+inputImage = hysteresisThresh(inputImage, 100, 50);
 
 % get image size
 [rows, cols] = size(inputImage);

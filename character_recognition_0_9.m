@@ -15,7 +15,7 @@ im = getInputImage();
 im = rgb2gray(im);
 
 % perform thresholding operation, invert, and crop image to object
-im = threshCropIm(im, 127);
+im = threshCropIm(im, 200);
 
 % find euler number
 % e = -1 if 2 holes, e = 0 for 1 hole, e = 1 for no holes
@@ -23,15 +23,15 @@ im = threshCropIm(im, 127);
 
 % only number with 2 holes is an 8
 if euler == -1
-    output = '8';
+    strOut = '8';
     
 % if 1 hole must be 0, 4, 6, or 9
 elseif euler == 0
     
 % else if no holes must be 1, 2, 3, 5, or 7
 else
-    
+    strOut = '';
 end
 
 
-fprintf("Number is %s\r\n", output);
+fprintf("Number is %s\r\n", strOut);
