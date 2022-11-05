@@ -10,7 +10,7 @@ function croppedIm = threshCropIm(inputImage, thresh)
 % inputImage = ~inputImage .* 255;
 
 inputImage = 255 - inputImage;
-inputImage = hysteresisThresh(inputImage, 100, 50);
+inputImage = hysteresisThresh(inputImage, 235, 100);
 
 % get image size
 [rows, cols] = size(inputImage);
