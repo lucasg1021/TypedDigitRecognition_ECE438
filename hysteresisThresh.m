@@ -4,6 +4,8 @@ function imThresh = hysteresisThresh(inputImage, hThresh, lThresh)
 % Lucas Gillette
 % 11/2/2022
 
+% make border 0s
+inputImage(1, :
 imThresh = zeros(size(inputImage));
 % get locations that are larger than high value
 [rH, cH] = find(inputImage > hThresh);
