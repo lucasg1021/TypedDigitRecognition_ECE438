@@ -18,7 +18,7 @@ im = rgb2gray(im);
 im = 255 - im;
 im = cast(medianFilt(im, 11), 'uint8');
 
-im = hysteresisThresh(im, 225, 100);
+im = hysteresisThresh(im, 200, 100);
 
 % close holes
 im = closing(im);
