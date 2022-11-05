@@ -10,8 +10,6 @@ inputImage(:, 1) = 0;
 inputImage(rows, :) = 0;
 inputImage(:, cols) = 0;
 
-% make border 0s
-inputImage(1, :
 imThresh = zeros(size(inputImage));
 % get locations that are larger than high value
 [rH, cH] = find(inputImage > hThresh);

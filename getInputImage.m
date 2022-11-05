@@ -4,7 +4,7 @@ function im = getInputImage()
 % Lucas Gillette ECE438 Final Project 
 % 10/31/2022
 
-[file, path] = uigetfile({'*.png'; '*jpg'; '*jpeg'; '*bmp'; '*tiff'; '*.*'},...
+[file, path] = uigetfile({'*jpeg'; '*.png'; '*jpg'; '*bmp'; '*tiff'; '*.*'},...
     'Select Input Image');
 
 if file == 0

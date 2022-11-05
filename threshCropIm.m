@@ -1,16 +1,8 @@
-function croppedIm = threshCropIm(inputImage, thresh)
-% Threshold and crop to binary object in image
+function croppedIm = threshCropIm(inputImage)
+% Crop to thresholded image
 %
 % Lucas Gillette
 % 10/31/2022
-
-% perform threshold and invert
-% inputImage(inputImage >= thresh) = 255;
-% inputImage(inputImage ~= 255) = 0;
-% inputImage = ~inputImage .* 255;
-
-inputImage = 255 - inputImage;
-inputImage = hysteresisThresh(inputImage, 235, 100);
 
 % get image size
 [rows, cols] = size(inputImage);

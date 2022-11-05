@@ -14,8 +14,17 @@ im = getInputImage();
 % if RGB convert to grayscale
 im = rgb2gray(im);
 
+% invert image and perform hysteresis threshold
+im = 255 - im;
+im = cast(medianFilt(im, 11), 'uint8');
+
+im = hysteresisThresh(im, 225, 100);
+
+% close holes
+im = closing(im);
+
 % perform thresholding operation, invert, and crop image to object
-im = threshCropIm(im, 200);
+im = threshCropIm(im);
 
 % find euler number
 % e = -1 if 2 holes, e = 0 for 1 hole, e = 1 for no holes
