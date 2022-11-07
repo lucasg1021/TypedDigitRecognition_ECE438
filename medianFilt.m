@@ -12,7 +12,7 @@ windowSize = (sz - 1)/2;
 for r = windowSize + 1:row - windowSize
    for c = windowSize + 1:col - windowSize
       window =  im(r-windowSize:r+windowSize, c-windowSize:c+windowSize);
-      imOut(r, c) = median(median(window));
+      imOut(r, c) = median(window, 'all');
    end
 end
 

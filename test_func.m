@@ -7,11 +7,11 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-numFolders = 1;
+numFolders = 5;
 numFiles = numFolders * 10;
 numCorrect = 0;
 
-for folders = numFolders:numFolders  % change first value to test multiple folders
+for folders = 1:numFolders  % change first value to test multiple folders
     for fileNum = 0:9
         file = sprintf("Train_%d-2/Train%d-2_%d.jpeg", folders, folders, fileNum);
         
