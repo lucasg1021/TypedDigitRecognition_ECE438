@@ -13,7 +13,8 @@ numCorrect = 0;
 
 for folders = 1:numFolders  % change first value to test multiple folders
     for fileNum = 0:9
-        file = sprintf("Train_%d-2/Train%d-2_%d.jpeg", folders, folders, fileNum);
+        %file = sprintf("Train_%d-2/Train%d-2_%d.jpeg", folders, folders, fileNum);
+        file = sprintf("Test_%d/Test%d_%d.jpeg", folders, folders, fileNum);
         
         im = imread(file);
         value = test_char_rec_func(im);
@@ -27,3 +28,4 @@ for folders = 1:numFolders  % change first value to test multiple folders
 end
 
 fprintf("\r\n%d correct out of %d\r\n", numCorrect, numFiles);
+fprintf("Percent Correct: %.2f\r\n", numCorrect/numFiles);

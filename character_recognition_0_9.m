@@ -9,6 +9,8 @@
 
 clear; close all;
 
+strOut = '-1';
+
 % get input image from user
 fprintf('Select Input Image\r\n\n');
 im = getInputImage();
@@ -150,6 +152,7 @@ else
         else
             strOut = '7';
             num = 7;
+            return;
         end
     end
 
